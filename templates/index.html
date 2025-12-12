@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>映画選択</title>
+</head>
+<body>
+
+    <h1>好きな映画を選んでください（3つ以上推奨）</h1>
+
+    <form action="/recommend" method="POST">
+        {% for movie in movies %}
+            <div>
+                <input type="checkbox" name="movies" value="{{ movie.movie_id }}">
+                {{ movie.title }}
+            </div>
+        {% endfor %}
+
+        <button type="submit">おすすめを表示</button>
+    </form>
+
+</body>
+</html>

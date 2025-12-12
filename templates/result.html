@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おすすめ映画</title>
+</head>
+<body>
+
+<h1>おすすめ映画</h1>
+<p>{{ message }}</p>
+
+<ul>
+    {% for movie in movies %}
+        <li>{{ movie.title }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/">戻る</a>
+
+</body>
+</html>
